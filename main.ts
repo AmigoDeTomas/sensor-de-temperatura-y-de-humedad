@@ -25,5 +25,14 @@ basic.forever(function () {
         basic.clearScreen()
         basic.pause(500)
         basic.showNumber(Lectura)
+        basic.showString("g")
+    } else if (input.buttonIsPressed(Button.B)) {
+        basic.showNumber(input.temperature() + 273)
+        basic.showString(" K")
+        basic.clearScreen()
+    } else {
+        basic.showNumber(input.temperature())
+        basic.showString("ºC")
+        basic.clearScreen()
     }
 })
